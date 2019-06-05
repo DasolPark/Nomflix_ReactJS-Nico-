@@ -45,8 +45,14 @@ export const tvApi = {
     api.get("tv/top_rated", {
       params
     }),
-  popular: () => api.get("tv/popular"),
-  airingToday: () => api.get("tv/airing_today"),
+  popular: () =>
+    api.get("tv/popular", {
+      params
+    }),
+  airingToday: () =>
+    api.get("tv/airing_today", {
+      params
+    }),
   showDetail: id =>
     api.get(`tv/${id}`, {
       params: {
